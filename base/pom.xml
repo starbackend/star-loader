@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>star</groupId>
+		<artifactId>star-loader</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+
+	<artifactId>star-loader-base</artifactId>
+	<packaging>pom</packaging>
+
+	<dependencies>
+		<dependency>
+			<groupId>star</groupId>
+			<artifactId>star-loader</artifactId>
+			<type>tar.gz</type>
+			<classifier>project</classifier>
+		</dependency>
+	</dependencies>
+
+	<modules>
+		<module>core</module>
+	</modules>
+
+	<profiles>
+		<profile>
+			<activation>
+				<os>
+					<name>linux</name>
+				</os>
+			</activation>
+			<modules>
+				<module>rpm</module>
+				<module>it</module>
+			</modules>
+		</profile>
+	</profiles>
+
+
+
+
+</project>

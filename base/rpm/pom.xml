@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>star</groupId>
+		<artifactId>star-loader-base</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+
+	<artifactId>star-loader-rpm</artifactId>
+	<packaging>rpm</packaging>
+
+	<properties>
+		<rpm.username>starload</rpm.username>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>star</groupId>
+			<artifactId>star-loader-core</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+	</dependencies>
+
+	<!-- 
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>rpm-maven-plugin</artifactId>
+				<version>2.1.2</version>
+				<extensions>true</extensions>
+			</plugin>
+		</plugins>
+	</build>
+	 -->
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-dependency-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>rpm-copy-webxml</id>
+						<phase>prepare-package</phase>
+						<goals>
+							<goal>copy</goal>
+						</goals>
+						<configuration>
+							<artifactItems>
+								<artifactItem>
+									<groupId>org.cwatch</groupId>
+									<artifactId>cwatch-boot-rpm</artifactId>
+									<version>0.0.4-SNAPSHOT</version>
+									<type>xml</type>
+									<classifier>webxml</classifier>
+									<outputDirectory>${rpm.res.dir}/${rpm.adminweb.dir}/conf</outputDirectory>
+									<destFileName>web.xml</destFileName>
+								</artifactItem>
+							</artifactItems>
+						</configuration>
+					</execution>
+					<execution>
+						<id>rpm-unpack-wars</id>
+						<phase>prepare-package</phase>
+						<goals>
+							<goal>unpack</goal>
+						</goals>
+						<configuration>
+							<artifactItems>
+								<artifactItem>
+									<groupId>org.apache.activemq</groupId>
+									<artifactId>activemq-web-console</artifactId>
+									<type>war</type>
+									<outputDirectory>${rpm.res.dir}/${rpm.adminweb.dir}/webapps/activemq</outputDirectory>
+								</artifactItem>
+							</artifactItems>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>	 
+	 
+
+	<distributionManagement>
+		<repository>
+			<id>cwatch-priv</id>
+			<name>cwatch-priv-releases</name>
+			<url>https://cwatch.org/repo/priv-release-local</url>
+		</repository>
+		<snapshotRepository>
+			<id>cwatch-priv</id>
+			<name>cwatch-priv-snapshots</name>
+			<url>https://cwatch.org/repo/priv-snapshot-local</url>
+		</snapshotRepository>
+	</distributionManagement>
+
+</project>

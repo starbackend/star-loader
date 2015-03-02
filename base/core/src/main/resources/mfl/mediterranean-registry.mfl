@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE MessageFormat SYSTEM 'mfl.dtd'>
+<MessageFormat name='EfcaRegistry' version='2.02'>
+    <StructFormat name='Header' delimOptional='n'>
+        <FieldFormat name='Flag' type='String' delimRef='' delim=',' delimOptional='n' codepage='UTF-8'/>
+        <FieldFormat name='EuCode' type='String' delimRef='' delim=',' dataDelim='"' delimOptional='n' codepage='UTF-8'/>
+        <FieldFormat name='Ir' type='String' delimRef='' delim=',' dataDelim='"' delimOptional='n' codepage='UTF-8'/>
+        <FieldFormat name='VesselName' type='String' delimRef='' delim=',' dataDelim='"' delimOptional='n' codepage='UTF-8'/>
+        <FieldFormat name='Ircs' type='String' delimRef='' delim=',' dataDelim='"' delimOptional='n' codepage='UTF-8'/>
+        <FieldFormat name='ExtMarking' type='String' delimRef='' delim=',' dataDelim='"' delimOptional='n' codepage='UTF-8'/>
+		<FieldFormat name='PortName' type='String' delimRef='' delim=',' dataDelim='"' delimOptional='n' codepage='UTF-8'/>
+        <FieldFormat name='VmsCode' type='String' delimRef='' delim=',' dataDelim='"' delimOptional='n' codepage='UTF-8'/>
+        <FieldFormat name='MMSI' type='String' delimRef='' delim=',' dataDelim='"' delimOptional='n' codepage='UTF-8'/>
+        <FieldFormat name='Type' type='String' delimRef='' delim=',' dataDelim='"' delimOptional='n' codepage='UTF-8'/>
+        <FieldFormat name='Gear' type='String' delimRef='' delim=',' dataDelim='"' delimOptional='n' codepage='UTF-8'/>
+        <FieldFormat name='GT' type='String' delimRef='' delim=',' dataDelim='"' delimOptional='n' codepage='UTF-8'/>
+		<FieldFormat name='LOA' type='String' delimRef='' delim=',' dataDelim='"' delimOptional='n' codepage='UTF-8'/>
+        <FieldFormat name='KW' type='String' delimRef='' delim=',' dataDelim='"' delimOptional='n' codepage='UTF-8'/>
+		<FieldFormat name='CatchPermit' type='String' delimRef='' delim=',' dataDelim='"' delimOptional='n' codepage='UTF-8'/>
+        <FieldFormat name='PermitType' type='String' delimRef='' delim=',' dataDelim='"' delimOptional='n' codepage='UTF-8'/>
+        <FieldFormat name='PermitFrom' type='String' delimRef='' delim=',' dataDelim='"' delimOptional='n' codepage='UTF-8'/>
+        <FieldFormat name='PermitTo' type='String' delimRef='' delim=',' dataDelim='"' delimOptional='n' codepage='UTF-8'/>
+        <FieldFormat name='NafoCode' type='String' delimRef='' delim=',' dataDelim='"' delimOptional='n' codepage='UTF-8'/>
+		<FieldFormat name='GHL' type='String' delimRef='' delim=',' dataDelim='"' delimOptional='n' codepage='UTF-8'/>
+        <FieldFormat name='IccatCode' type='String' delimRef='' delim=',' dataDelim='"' delimOptional='n' codepage='UTF-8'/>
+        <FieldFormat name='IccatId' type='String' delimRef='' delim=',' dataDelim='"' delimOptional='n' codepage='UTF-8'/>
+        <FieldFormat name='NEAFCCode' type='String' delimRef='' delim='\r\n' dataDelim='"' delimOptional='n' codepage='UTF-8'/>           
+    </StructFormat>
+    <StructFormat name='Record' delimOptional='n' repeat='*'>
+        <FieldFormat name='Flag' type='String' delimRef='' delim=',' delimOptional='n' codepage='windows-1252'/>
+        <FieldFormat name='EuCode' type='String' delimRef='' delim=',' dataDelim='"' delimOptional='n' codepage='windows-1252'/>
+        <FieldFormat name='Ir' type='String' delimRef='' delim=',' dataDelim='"' delimOptional='n' codepage='windows-1252'/>
+        <FieldFormat name='VesselName' type='String' delimRef='' delim=',' dataDelim='"' delimOptional='n' codepage='windows-1252'/>
+        <FieldFormat name='Ircs' type='String' delimRef='' delim=',' dataDelim='"' delimOptional='n' codepage='windows-1252'/>
+        <FieldFormat name='ExtMarking' type='String' delimRef='' delim=',' dataDelim='"' delimOptional='n' codepage='windows-1252'/>
+		<FieldFormat name='PortName' type='String' delimRef='' delim=',' dataDelim='"' delimOptional='n' codepage='windows-1252'/>
+        <FieldFormat name='VmsCode' type='String' delimRef='' delim=',' dataDelim='"' delimOptional='n' codepage='windows-1252'/>
+        <FieldFormat name='MMSI' type='String' delimRef='' delim=',' dataDelim='"' delimOptional='n' codepage='windows-1252'/>
+        <FieldFormat name='Type' type='String' delimRef='' delim=',' dataDelim='"' delimOptional='n' codepage='windows-1252'/>
+        <FieldFormat name='Gear' type='String' delimRef='' delim=',' dataDelim='"' delimOptional='n' codepage='windows-1252'/>
+        <FieldFormat name='GT' type='String' delimRef='' delim=',' dataDelim='"' delimOptional='n' codepage='windows-1252'/>
+		<FieldFormat name='LOA' type='String' delimRef='' delim=',' dataDelim='"' delimOptional='n' codepage='windows-1252'/>
+        <FieldFormat name='KW' type='String' delimRef='' delim=',' dataDelim='"' delimOptional='n' codepage='windows-1252'/>
+		<FieldFormat name='CatchPermit' type='String' delimRef='' delim=',' dataDelim='"' delimOptional='n' codepage='windows-1252'/>
+        <FieldFormat name='PermitType' type='String' delimRef='' delim=',' dataDelim='"' delimOptional='n' codepage='windows-1252'/>
+        <FieldFormat name='PermitFrom' type='String' delimRef='' delim=',' dataDelim='"' delimOptional='n' codepage='windows-1252'/>
+        <FieldFormat name='PermitTo' type='String' delimRef='' delim=',' dataDelim='"' delimOptional='n' codepage='windows-1252'/>
+        <FieldFormat name='NafoCode' type='String' delimRef='' delim=',' dataDelim='"' delimOptional='n' codepage='windows-1252'/>
+		<FieldFormat name='GHL' type='String' delimRef='' delim=',' dataDelim='"' delimOptional='n' codepage='windows-1252'/>
+        <FieldFormat name='IccatCode' type='String' delimRef='' delim=',' dataDelim='"' delimOptional='n' codepage='windows-1252'/>
+        <FieldFormat name='IccatId' type='String' delimRef='' delim=',' dataDelim='"' delimOptional='n' codepage='windows-1252'/>
+        <FieldFormat name='NEAFCCode' type='String' delimRef='' delim='\r\n' dataDelim='"' delimOptional='n' codepage='windows-1252'/>    
+    </StructFormat>
+</MessageFormat>
