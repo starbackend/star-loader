@@ -7,7 +7,7 @@ import org.springframework.context.annotation.PropertySource;
 
 @Configuration
 @PropertySource({"classpath:/star-loader.properties"})
-@Import({ProjectOVRUploadController.class, StarLoaderRoutes.class, CamelBootConfiguration.class})
+@Import({StarLoaderRoutes.class, CamelBootConfiguration.class})
 public class StarLoaderConfiguration {
 	
 	
