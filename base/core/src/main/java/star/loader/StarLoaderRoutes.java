@@ -21,8 +21,6 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.stereotype.Component;
 
-import com.bea.wlxt.WLXT;
-
 @Configuration
 @EnableConfigurationProperties(StarLoaderProperties.class)
 public class StarLoaderRoutes {

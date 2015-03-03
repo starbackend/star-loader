@@ -22,7 +22,7 @@ public class ProjectOvrCsvParser {
 	public enum Fields {
 		MMSI,
 		IR,
-		IRCS,
+		IRCS, IMO,
 		
 		
 	}
@@ -60,6 +60,10 @@ public class ProjectOvrCsvParser {
 					root.getProjectOvrMessage().add(msg);
 					
 					msg.setMMSI(getInteger(record, Fields.MMSI));
+					msg.setIMO(getString(record, Fields.IMO));
+					msg.setCallSign(getString(record, Fields.IRCS));
+					msg.setName(record.get("Vessel Name"));
+					
 					
 				}
 			} finally {
